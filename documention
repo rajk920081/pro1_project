@@ -1,0 +1,32 @@
+Q.1 How to show "Hello world" in brower using django?
+
+step:1
+    make a anyfile with .py extention and create a function like this
+    from django.shortcuts import HttpResponse
+    def hello(request):
+        return HttpResponse("Hello world")
+
+    Note:
+    function always take 1 argument name 'request'
+    always return something HttpResponse() first import like this
+    from django.shortcuts import HttpResponse
+    HttpResponse take string send browser
+
+step:2
+call function
+
+go to urls.py
+import your function
+call function with pattens
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',myview.hello1),
+    path('ab/', myview.about)
+]
+
+
+
+
+
+
